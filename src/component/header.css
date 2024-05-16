@@ -1,0 +1,129 @@
+.header.dark{
+  background-color: rgba(13, 96, 230, 0.115);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  z-index: 100;
+}
+.header.light {
+  background: rgb(15, 15, 15);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  z-index: 100;
+}
+.header-logo {
+  width: 30%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-searchbar {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchBar {
+  width: 50%;
+  height: 40%;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.search-input {
+  width: 90%;
+  height: 100%;
+  border-radius: 0;
+  padding-left: 3%;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.search-button {
+  width: 10%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.search-icon {
+  cursor: pointer;
+}
+
+.header-left {
+  width: 40%;
+  display: flex;
+}
+
+.logo-image {
+  width: 50%;
+}
+
+.header-logout {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header-profile.light {
+  
+ color:rgb(6, 6, 6);
+}
+
+
+.logout-button {
+  width: 40%;
+  height: 40%;
+  font-size: 1.1vw;
+  font-weight: bold;
+  border-radius: 50px;
+  background-color: rgb(137, 137, 137);
+  box-shadow: 2px 3px #393838c9;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: rgb(160, 160, 160);
+  box-shadow: 2px 3px #636363c9;
+}
+
+.logout-button:active {
+  background-color: rgb(122, 122, 122);
+  box-shadow: 2px 3px #404040c9;
+}
+.header-profile.dark{
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ margin-right:50px ;
+ color:rgb(71, 69, 69);
+}
+.header-profile.light{
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ margin-right:50px ;
+ color:white;
+}
+.profile-icon {
+  width: 50px;
+  
+}

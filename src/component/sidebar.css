@@ -1,0 +1,69 @@
+.sidebar-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100px;
+  padding-top: 3%;
+  z-index: 50;
+  display: none;
+ background-color: #edededa3;
+  background-size: cover;
+  display: flex;
+}
+.sidebar-menu-button.light{
+  color:white;
+  left:0;
+  z-index: 100;
+}
+.sidebar-menu-button.dark{
+  color:rgb(4, 4, 4);
+}
+.side-bar-display {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 200px;
+  padding-top: 1%;
+  z-index: 999;
+  background-color: rgba(172, 172, 172, 0.337);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  border-right: 2px solid rgba(255, 255, 255, 0.429);
+  font-weight: bold;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.dashboard-item {
+  padding: 8%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.dashboard-item:hover {
+  background-color: rgba(233, 233, 233, 0.304);
+}
+
+.dashboard-item:active {
+  background-color: rgba(165, 165, 165, 0.612);
+}
+
+.sidebar-menu-button {
+  margin-left: 50%;
+  width: 5%;
+  height: 40%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar-close-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
