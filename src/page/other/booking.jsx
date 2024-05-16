@@ -30,6 +30,21 @@ const BookingList = () => {
         doc.save('bookings.pdf');
     };
 
+    const handleDelete = async (id) => {
+        try {
+            const response = await fetch(`http://localhost:8000/booking/${id}`, {
+                method: 'DELETE'
+            });
+            if (response.ok) {
+                setBookings(bookings.filter(booking => booking._id !== id));
+            } else {
+                throw new Error('Failed to delete booking');
+            }
+        } catch (error) {
+            console.error('Error deleting booking:', error);
+        }
+    };
+
     return (
         <div>
             <h1>Booking List</h1>
@@ -40,10 +55,9 @@ const BookingList = () => {
                         <th>Show Time</th>
                         <th>Show Date</th>
                         <th>Movie ID</th>
-                        {/* <th>Screen ID</th> */}
-                        {/* <th>Seats</th> */}
                         <th>Total Price</th>
                         <th>User ID</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -52,16 +66,11 @@ const BookingList = () => {
                             <td>{booking.showTime}</td>
                             <td>{booking.showDate}</td>
                             <td>{booking.movieId}</td>
-                            {/* <td>{booking.screenId}</td> */}
-                            {/* <td>
-                                <ul>
-                                    {booking.seats.map((seat, index) => (
-                                        <li key={index}>{`Row: ${seat.row}, Col: ${seat.col}, Seat ID: ${seat.seat_id}, Price: ${seat.price}`}</li>
-                                    ))}
-                                </ul>
-                            </td> */}
                             <td>{booking.totalPrice}</td>
                             <td>{booking.userId}</td>
+                            <td>
+                                <Button variant="danger" onClick={() => handleDelete(booking._id)}>Delete</Button>
+                            </td>
                         </tr>
                     ))}
                 </tbody>
